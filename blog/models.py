@@ -27,7 +27,7 @@ class Post(models.Model):
 
     class Meta:
         """
-        Ordering Experiences
+        Ordering Experiences in descending order
         """
         ordering = ['-created_on']
 
