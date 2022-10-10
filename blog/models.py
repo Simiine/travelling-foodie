@@ -31,4 +31,8 @@ class Post(models.Model):
         """
         ordering = ['-created_on']
 
-    
+    def __str__(self):
+        """
+        Returns a string representation of an object
+        """
+        return self.title
