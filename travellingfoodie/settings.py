@@ -46,6 +46,7 @@ INSTALLED_APPS = [
     'django_summernote',
     'taggit',
     'django_countries',
+    'djangoratings',
     'blog',
 ]
 
