@@ -36,3 +36,9 @@ class Post(models.Model):
         Returns a string representation of an object
         """
         return self.title
+
+    def number_of_likes(self):
+        """
+        Returns the number of likes on an experience
+        """
+        return self.likes.count()
