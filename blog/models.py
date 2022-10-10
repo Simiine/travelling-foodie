@@ -8,7 +8,7 @@ from djangoratings.fields import RatingField
 
 STATUS = ((0, "Draft"), (1, "Published"))
 
-class Post(models.Model):
+class Experience(models.Model):
     """
     Model for Experiences
     """
