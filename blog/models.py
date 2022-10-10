@@ -24,5 +24,11 @@ class Post(models.Model):
     tags = TaggableManager()
     status = models.IntegerField(choices=STATUS, default=0)
     likes = models.ManyToManyField(User, related_name='experience_likes', blank=True)
-    
 
+    class Meta:
+        """
+        Ordering Experiences
+        """
+        ordering = ['-created_on']
+
+    
