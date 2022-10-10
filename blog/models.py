@@ -3,7 +3,9 @@ from django.contrib.auth.models import User
 from cloudinary.models import CloudinaryField
 from taggit.managers import TaggableManager
 from django_countries.fields import CountryField
+from django_summernote.fields import SummernoteTextField
 
 STATUS = ((0, "Draft"), (1, "Published"))
+
 
 
