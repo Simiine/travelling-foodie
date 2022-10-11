@@ -10,4 +10,7 @@ class ExperienceAdmin(SummernoteModelAdmin):
     prepopulated_fields = {'slug': ('title',)}
     summernote_fields = ('content', 'recipe')
 
-
+@admin.register(Comment)
+class CommentAdmin(admin.ModelAdmin):
+    list_display = ('author', 'body', 'experience', 'created_on', 'approved')
+    
