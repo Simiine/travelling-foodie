@@ -89,6 +89,8 @@ I passed the code through [PEP8](http://pep8online.com/) and the result showed a
 ### Bugs
 #### Adding django ratings field 
 Following the steps to add the ratings field. The last step was python manage.py syncdb but the terminal gave an error of SyntaxError: invalid syntax
+#### Summernote error
+clean() got an unexpected keyword argument 'styles'
 
 ## Deployment
 The live deployment can be found using the following URL - https://events-planner-p3.herokuapp.com/
