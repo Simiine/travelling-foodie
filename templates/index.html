@@ -8,8 +8,11 @@
         <!-- Experience Entries Column -->
         <div class="col-12 mt-3 left">
             <div class="row">
-                {% for experience in experience_list %}
-                {% endfor %}
+            {% for experience in experience_list %}
+
+            {% if forloop.counter|divisibleby:3 %}
+
+            {% endfor %}
             </div>
         </div>
     </div>
