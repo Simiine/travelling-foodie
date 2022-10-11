@@ -57,3 +57,9 @@ class Comment(models.Model):
         """
         ordering = ['created_on']
 
+    def __str__(self):
+        """
+        Return string representation
+        """
+        return f"Comment {self.body} by {self.name}"
+
