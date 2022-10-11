@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import Experience
+from .models import Experience, Comment
 from django_summernote.admin import SummernoteModelAdmin
 
 @admin.register(Experience)
