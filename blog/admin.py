@@ -13,4 +13,4 @@ class ExperienceAdmin(SummernoteModelAdmin):
 @admin.register(Comment)
 class CommentAdmin(admin.ModelAdmin):
     list_display = ('author', 'body', 'experience', 'created_on', 'approved')
-    
+    list_filter = ('author', 'created_on', 'approved')
