@@ -14,3 +14,4 @@ class ExperienceAdmin(SummernoteModelAdmin):
 class CommentAdmin(admin.ModelAdmin):
     list_display = ('author', 'body', 'experience', 'created_on', 'approved')
     list_filter = ('author', 'created_on', 'approved')
+    search_fields = ('author', 'body')
