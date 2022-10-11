@@ -51,3 +51,9 @@ class Comment(models.Model):
     created_on = models.DateTimeField(auto_now_add=True)
     approved = models.BooleanField(default=False)
 
+    class Meta:
+        """
+        Order comments in ascending order
+        """
+        ordering = ['created_on']
+
