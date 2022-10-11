@@ -8,4 +8,5 @@ class ExperienceList(generic.ListView):
     """
     model = Experience
     queryset = Experience.objects.filter(status=1).order_by('-created_on')
+    template_name = 'index.html'
     
