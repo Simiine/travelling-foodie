@@ -27,18 +27,18 @@
             <div class="card-body">
                 <!-- The experience content goes inside the card-text. -->
                 <!-- Use the | safe filter inside the template tags -->
-                <p class="card-text "></p>
+                <p class="card-text "> {{ experience.content | safe }}</p>
                 <div class="row">
 
                     <div class="col-1">
                         <!-- The number of likes goes before the closing strong tag -->
-                        <strong class="text-secondary"><i class="far fa-heart"></i> </strong>
+                        <strong class="text-secondary"><i class="far fa-heart"></i> {{ experience.number_of_likes }}</strong>
                     </div>
                     <div class="col-1">
                         {% with comments.count as total_comments %}
                         <strong class="text-secondary"><i class="far fa-comments"></i>
                             <!-- Our total_comments variable goes before the closing strong tag -->
-                        </strong>
+                            {{ total_comments }}</strong>
                         {% endwith %}
                     </div>
                 </div>
