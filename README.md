@@ -92,6 +92,8 @@ Following the steps to add the ratings field. The last step was python manage.py
 #### Summernote error
 clean() got an unexpected keyword argument 'styles'
 
+I fixed this iss with summernote by removing the summernote import from the top of the models.py file and changing....
+
 ## Deployment
 The live deployment can be found using the following URL - https://events-planner-p3.herokuapp.com/
 
