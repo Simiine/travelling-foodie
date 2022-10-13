@@ -1,3 +1,9 @@
+.logo {
+    height: 100px;
+    width: 100px;
+    align-self: center;
+}
+
 body {
     background-color: #F9FAFC;
 }
