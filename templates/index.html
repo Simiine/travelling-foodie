@@ -19,7 +19,7 @@
                                 <img class="card-img-top" src=" {{ experience.featured_image.url }}" alt="">
                                 {% endif %}
                                 <div class="image-flash">
-                                    <p>Author: {{ experience.author }}</p>
+                                    <p class="author">Author: {{ post.author }}</p>
                                 </div>
                             </div>
                             <a href="#" class="experience-link">
@@ -52,5 +52,3 @@
         </ul>
     </nav>
 </div>
-
-{%endblock%}
