@@ -14,7 +14,7 @@
                 {% if "placeholder" in experience.featured_image.url %}
                 <img src="https://codeinstitute.s3.amazonaws.com/fullstack/blog/default.jpg" width="100%">
                 {% else %}
-                <img src="" width="100%">
+                <img src=" {{ experience.featured_image.url }}" width="100%">
                 {% endif %}
             </div>
         </div>
