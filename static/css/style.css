@@ -8,32 +8,51 @@ body {
     /* background-color: #F9FAFC; */
 }
 
+/* logo and header */
+
+header.masthead {
+    width: 100%;
+    height: 60rem;
+    background: no-repeat center center;
+    background-size: cover;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* height: 100rem;
+    margin-bottom: 50px;
+    background: no-repeat center center;
+    background-color: #868e96;
+    background-attachment: scroll;
+    position: relative;
+    background-size: cover; */
+}
 
 .logo {
     width: 10rem;
 }
 
-.brand {
+/* .brand {
     font-family: Lato, sans-serif;
     font-size: 1.4rem;
     font-weight: 700;
     color: #4A4A4F;
-}
+} */
 
-.red-o {
+/* .red-o {
     color: #E84610;
-}
+} */
 
-.thin {
+/* .thin {
     font-weight: 300;
-}
+} */
 
-.light-bg {
+/* .light-bg {
     background-color: #fff;
-}
+} */
 
-.dark-bg {
-    background-color: #445261;
+.bright-bg {
+    background-color: #61BDA9;
 }
 
 .main-bg {
