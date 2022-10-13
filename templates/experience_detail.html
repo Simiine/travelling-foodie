@@ -7,7 +7,7 @@
                 <!-- Experience title goes in these h1 tags -->
                 <h1 class="experience-title">{{ experience.title }}</h1>
                 <!-- Experience author goes before the | the experiences's created date goes after -->
-                <p class="experience-subtitle"> | </p>
+                <p class="experience-subtitle">{{ experience.author }} | {{ experience.created_on }}</p>
             </div>
             <div class="d-none d-md-block col-md-6 masthead-image">
                 <!-- The featured image URL goes in the src attribute -->
