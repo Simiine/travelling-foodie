@@ -22,7 +22,7 @@
                                     <p class="author">Author: {{ post.author }}</p>
                                 </div>
                             </div>
-                            <a href="#" class="experience-link">
+                            <a href="{% url 'experience_detail' experience.slug %}" class="experience-link">
                                 <h2 class="card-title">{{ experience.title }}</h2>
                                 <p class="card-text">{{ experience.excerpt }}</p>
                             </a>
