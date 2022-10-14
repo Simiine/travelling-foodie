@@ -20,7 +20,7 @@
         integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous">
     </script>
     <!-- <link rel="stylesheet" href="{% static 'css/style.css' %}"> -->
-    <link rel="stylesheet" href="/static/css/style.css">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
     <title>Travelling Foodie</title>
 
 </head>
@@ -28,19 +28,16 @@
 <body class="d-flex flex-column h-100 main-bg">
 
     <!-- Navigation -->
-
-    <nav class="navbar navbar-expand-lg navbar-light bg-white">
-        <!--Logo-->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top" id="navText">
+        <!-- Logo -->
         <div class="container-fluid">
-            <!-- <a class="navbar-brand" href="{% url 'home' %}"><span class="brand">c<span class="red-o">o</span>de<span
-                        class="thin">|star</span></span></span></a> -->
-            <a href="{% url 'home' %}">
+            <a class="navbar-brand" href="{% url 'home' %}">
                 <img class="logo" src="https://res.cloudinary.com/dawekfpal/image/upload/v1665696162/Travelling%20Foodie/Travelling-foodie-logo_ae46uy.png" alt="travelling-foodie-logo">
             </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText"
-                aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
+            <!-- Page links -->
             <div class="collapse navbar-collapse" id="navbarText">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                     <li class="nav-item">
@@ -59,9 +56,6 @@
                     </li>
                     {% endif %}
                 </ul>
-                <span class="navbar-text text-muted">
-                    adventures of a software developer
-                </span>
             </div>
         </div>
     </nav>
