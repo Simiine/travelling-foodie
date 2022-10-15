@@ -48,7 +48,7 @@ footer {
 
 /* Sections of Information on Blog post */
 .card {
-    border: none;
+    /* border: none; */
     background-color: transparent;
 }
 
