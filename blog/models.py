@@ -61,5 +61,5 @@ class Comment(models.Model):
         """
         Return string representation
         """
-        return f"Comment {self.body} by {self.name}"
+        return f"Comment {self.body} by {self.author.username}"
 
