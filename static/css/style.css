@@ -1,85 +1,61 @@
+* {
+    margin: 0;
+    padding: 0;
+    border: none;
+}
+
 /* Logo and nav bar */
 
 .logo {
-    width: 13rem;
+    width: 10rem;
 }
 
 #navText {
-    font-size: 1.2rem;
-    font-weight: 800;
-}
-
-
-
-/* #mainNav {
-    position: absolute;
-    border-bottom: 1px solid #e9ecef;
-    background-color: white;
-    font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-  } */
-
-body {
-    /* background-color: #F9FAFC; */
-}
-
-/* logo and header */
-
-header.masthead {
-    width: 100%;
-    height: 60rem;
-    background: no-repeat center center;
-    background-size: cover;
-    position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    /* height: 100rem;
-    margin-bottom: 50px;
-    background: no-repeat center center;
-    background-color: #868e96;
-    background-attachment: scroll;
-    position: relative;
-    background-size: cover; */
-}
-
-
-
-/* .brand {
-    font-family: Lato, sans-serif;
-    font-size: 1.4rem;
+    font-size: 1.1rem;
     font-weight: 700;
-    color: #4A4A4F;
-} */
+    font-family: Lato, sans-serif;
+}
 
-/* .red-o {
-    color: #E84610;
-} */
 
-/* .thin {
-    font-weight: 300;
-} */
 
-/* .light-bg {
-    background-color: #fff;
-} */
 
+/* Footer */
 .bright-bg {
     background-color: #61BDA9;
+    font-size: 1.5rem;
+   
 }
 
-.main-bg {
-    background-color: #F9FAFC;
+/* footer */
+
+footer {
+    height: 5rem;
 }
 
+.social-networks {
+    text-align: center;
+    display: flex;
+    list-style-type: none;
+    justify-content: center;
+    color: #fff;
+}
+
+.social-networks i {
+    color: white;
+}
+
+
+
+/* Sections of Information on Blog post */
 .card {
     border: none;
     background-color: transparent;
 }
 
+/*Author name label on experience*/
 .image-container {
     position: relative;
 }
-
 .image-flash {
     position: absolute;
     bottom: 5%;
@@ -95,12 +71,15 @@ header.masthead {
 }
 
 .masthead {
-    margin-top: 10px;
     overflow: hidden;
     position: relative;
     display: inline-block;
+
     height: 33vh;
     width: 100%;
+    background: no-repeat center center;
+    background-size: cover;
+    margin-bottom: 3rem;
 }
 
 .masthead-text {
