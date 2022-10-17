@@ -61,6 +61,20 @@
         </div>
     </nav>
 
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8 offset-md-2">
+                {% for message in messages %}
+                <div class="alert {{ message.tags }} alert-dismissible fade show" id="msg" role="alert">
+                    {{ message | safe }}
+                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                </div>
+
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+
     <!-- Page Header-->
     <header class="masthead" style="background-image: url('https://res.cloudinary.com/dawekfpal/image/upload/v1665702255/Travelling%20Foodie/collage-of-food-and-travel-pictures.jpg');">
     </header>
