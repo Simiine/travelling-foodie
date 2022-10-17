@@ -1,6 +1,7 @@
 from django.shortcuts import render, get_object_or_404
 from django.views import generic, View
 from .models import Experience
+from .forms import CommentForm
 
 class ExperienceList(generic.ListView):
     """
@@ -29,6 +30,7 @@ class ExperienceDetail(View):
             {
                 "experience": experience,
                 "comments": comments,
-                "liked": liked
+                "liked": liked,
+                "comment_form": CommentForm()
             },
         )
