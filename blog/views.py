@@ -73,11 +73,11 @@ class ExperienceLike(View):
     """
 
     def post(self, request, slug, *args, **kwargs):
-        experience = get_object_or_404(Post, slug=slug)
+        experience = get_object_or_404(Experience, slug=slug)
 
-        if post.like.filter(id=request.user.id).exists():
-            post.likes.remove(request.user)
+        if experience.likes.filter(id=request.user.id).exists():
+            experience.likes.remove(request.user)
         else:
-            post.likes.add(request.user)
+            experience.likes.add(request.user)
 
         return HttpResponseRedirect(reverse('experience_detail', args=[slug]))
