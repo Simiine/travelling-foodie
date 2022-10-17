@@ -1,5 +1,6 @@
-from django.shortcuts import render, get_object_or_404
+from django.shortcuts import render, get_object_or_404, reverse
 from django.views import generic, View
+from django.http import HttpResponseRedirect
 from .models import Experience
 from .forms import CommentForm
 
@@ -65,3 +66,20 @@ class ExperienceDetail(View):
                 "comment_form": CommentForm()
             },
         )
+
+class ExperienceLike(View):
+    """
+    Creates experience likes view
+    """
+
+    def post(self, request, slug):
+        post = get_object_or_404(Post, slug=slug)
+
+        if post.like.filter(id=request.user.id). exists():
+            post.likes.remove(request.user)
+        else:
+            post.likes.add(request.user)
+
+        return HttpResponseRedirect(reverse('experience_detail', args=[slug]))
+
+        
