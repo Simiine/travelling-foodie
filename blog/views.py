@@ -81,3 +81,23 @@ class ExperienceLike(View):
             experience.likes.add(request.user)
 
         return HttpResponseRedirect(reverse('experience_detail', args=[slug]))
+
+# @login_required
+def add_experience(request):
+    """
+    Add experience
+    """
+    experience_form = ExperienceForm()
+    print(request.method)
+    if request.method == "POST":
+        experience_form = ExperienceForm(request.POST, request.FILES)
+        print(experience_form.is_valid())
+        if experience_form.is_valid():
+            experience_form = experience_form.save(commit=False)
+            experience_form.title = experience_form.title.title()
+            experience_form.author = request.user
+            experience_form.status = 1
+            experience_form.save()
+            return redirect('home')
+
+    return render(request, 'add_experience.html', context={'experience_form': experience_form})
