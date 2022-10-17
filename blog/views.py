@@ -30,6 +30,38 @@ class ExperienceDetail(View):
             {
                 "experience": experience,
                 "comments": comments,
+                "commented": False,
+                "liked": liked,
+                "comment_form": CommentForm()
+            },
+        )
+
+    def post(self, request, slug, *args, **kwargs):
+        queryset = Experience.objects.filter(status=1)
+        experience = get_object_or_404(queryset, slug=slug)
+        comments = experience.comments.filter(approved=True).order_by('created_on')
+        liked = False
+        if experience.likes.filter(id=self.request.user.id).exists():
+            liked = True
+
+        comment_form = CommentForm(data=request.POST)
+
+        if comment_form.is_valid():
+            comment_form.instance.email = request.user.email
+            comment_form.instance.name = request.user.username
+            comment = comment_form.save(commit=FALSE)
+            comment.post = post
+            comment.save()
+        else:
+            comment_form = CommentForm()
+
+        return render(
+            request,
+            "experience_detail.html",
+            {
+                "experience": experience,
+                "comments": comments,
+                "commented": True,
                 "liked": liked,
                 "comment_form": CommentForm()
             },
