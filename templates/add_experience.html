@@ -1,0 +1,38 @@
+{% extends 'base.html' %} 
+{% load crispy_forms_tags %}
+{% load cloudinary %}
+
+{% block content %}
+
+{% if user.is_authenticated %}
+<div class="container">
+    <h1>Share your Experience!</h1>
+    <div class="row">
+        <div>
+            <form action="{% url 'addexperience' %}" method="POST" enctype="multipart/form-data">{% csrf_token %}
+                <div class="row">
+                    <div class="col-6">
+                        {{ experience_form.title|as_crispy_field }}
+                    </div>
+                </div>
+                <div class="row">
+                    {{ experience_form.featured_image|as_crispy_field }}
+                    <p>If no image is uploaded a default image will be displayed</p>
+                </div>
+                <div class="row">
+                    <div class="col-6">
+                        {{ experience_form.country|as_crispy_field }}
+                    </div>
+                </div>
+                <div class="row">
+                    {{ experience_form.content|as_crispy_field|safe }}
+                </div>
+                <div class="row">
+                    {{ experience_form.recipe|as_crispy_field|safe }}
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+{% endblock %}
