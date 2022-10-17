@@ -72,14 +72,12 @@ class ExperienceLike(View):
     Creates experience likes view
     """
 
-    def post(self, request, slug):
-        post = get_object_or_404(Post, slug=slug)
+    def post(self, request, slug, *args, **kwargs):
+        experience = get_object_or_404(Post, slug=slug)
 
-        if post.like.filter(id=request.user.id). exists():
+        if post.like.filter(id=request.user.id).exists():
             post.likes.remove(request.user)
         else:
             post.likes.add(request.user)
 
         return HttpResponseRedirect(reverse('experience_detail', args=[slug]))
-
-        
