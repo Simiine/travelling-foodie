@@ -50,6 +50,7 @@ INSTALLED_APPS = [
     'django_summernote',
     'taggit',
     'django_countries',
+    'crispy_forms',
     'blog',
 ]
 
@@ -135,6 +136,8 @@ SITE_ID = 1
 
 LOGIN_REDIRECT_URL = '/'
 LOGOUT_REDIRECT_URL = '/'
+
+CRISPY_TEMPLATE_PACK = 'bootstrap4'
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.2/howto/static-files/
