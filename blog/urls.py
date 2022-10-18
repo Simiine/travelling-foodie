@@ -7,4 +7,3 @@ urlpatterns = [
     path('like/<slug:slug>', views.ExperienceLike.as_view(), name='experience_like'),
     path('addexperience/', views.add_experience, name='addexperience'),
 ]
-
