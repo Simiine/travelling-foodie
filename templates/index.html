@@ -2,6 +2,10 @@
 
 {% block content %}
 
+<!-- Page Header-->
+<header class="masthead" style="background-image: url('https://res.cloudinary.com/dawekfpal/image/upload/v1665702255/Travelling%20Foodie/collage-of-food-and-travel-pictures.jpg');">
+</header>
+
 <div class="container-fluid">
     <div class="row">
         <!-- Welcome message -->
@@ -30,7 +34,7 @@
                             </div>
                             <a href="{% url 'experience_detail' experience.slug %}" class="experience-link">
                                 <h2 class="card-title">{{ experience.title }}</h2>
-                                <p class="card-text">{{ experience.excerpt }}</p>
+                                <!-- <p class="card-text">{{ experience.excerpt }}</p> -->
                             </a>
                             <hr />
                             <p class="card-text text-muted h6">{{ experience.created_on}} <i class="far fa-heart"></i>{{ experience.number_of_likes }}</p>
