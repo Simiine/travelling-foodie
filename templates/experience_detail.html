@@ -57,6 +57,27 @@
         </div>
     </div>
 </div>
+
+<!-- Edit Experience --> <!-- To do how to authenticate for user loged in to edit --> 
+<div class="container mt-4">
+    <div class="row">
+        <div class="col-6">
+            {% if request.user == experience.author %}
+            <h5>Manage your Experience:</h5>
+            <strong>{{ experience.author }}</strong> - {{ experience.title }}
+            <p><a href="{% url 'experience_edit' recipe.slug %}"><button
+                        class="btn btn-success"><i class="fa fa-edit"></i> | Edit</button></i></a>
+                <a href="{% url 'experience_delete' recipe.slug %}"><button class="btn btn-danger"><i
+                            class="fa fa-trash"></i> | Delete</button></a></p>
+            {% endif %}
+        </div>
+    </div>
+</div>
+<div class="container text-center">
+    <br /><br />
+    <a href="{% url 'home' %}" class="back-button btn-default">Back</a>
+</div>
+
 <div class="row">
     <div class="col">
         <hr>
@@ -93,7 +114,6 @@
             </div>
             {% else %}
             {% if user.is_authenticated %}
-
             <h3>Leave a comment:</h3>
             <p>Posting as: {{ author.username }}</p>
             <form method="post" style="margin-top: 1.3em;">
@@ -106,6 +126,5 @@
         </div>
     </div>
 </div>
-
 
 {% endblock content %}
