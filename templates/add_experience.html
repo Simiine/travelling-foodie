@@ -9,7 +9,7 @@
     <h1>Share your Experience!</h1>
     <div class="row">
         <div>
-            <form action="{% url 'addexperience' %}" method="POST" enctype="multipart/form-data">{% csrf_token %}
+            <form action="{% url 'add_experience' %}" method="POST" enctype="multipart/form-data">{% csrf_token %}
                 <div class="row">
                     <div class="col-6">
                         {{ experience_form.title|as_crispy_field }}
