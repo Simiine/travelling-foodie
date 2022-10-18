@@ -1,8 +1,11 @@
 from django.shortcuts import render, get_object_or_404, reverse
 from django.views import generic, View
 from django.http import HttpResponseRedirect
-from .models import Experience
+from django.contrib.auth import authenticate
+from .models import Experience, Comment
+from .import forms
 from .forms import CommentForm
+from .forms import ExperienceForm
 
 class ExperienceList(generic.ListView):
     """
@@ -99,3 +102,17 @@ def add_experience(request):
             return redirect('home')
 
     return render(request, 'add_experience.html', context={'experience_form': experience_form})
+
+# class ExperienceCreate(CreateView):
+#     """ 
+#     Create an Experience
+#     """
+#     model = Experience
+#     form_class = ExperienceForm
+#     template_name = 'add_experience.html'
+#     success_url = reverse_lazy('experience')
+
+#     def form_valid(self, form):
+#         form.instance.author = self.request.user
+#         return super().form_valid(form)
+
