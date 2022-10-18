@@ -2,6 +2,8 @@ from django.shortcuts import render, get_object_or_404, reverse
 from django.views import generic, View
 from django.http import HttpResponseRedirect
 from django.contrib.auth import authenticate
+from django.views.generic.edit import UpdateView, DeleteView
+from django.urls import reverse_lazy
 from .models import Experience, Comment
 from .import forms
 from .forms import CommentForm
@@ -116,3 +118,28 @@ def add_experience(request):
 #         form.instance.author = self.request.user
 #         return super().form_valid(form)
 
+class ExperienceEditView(UpdateView):
+    """
+    Edit Experience
+    """
+    model = Experience
+    form_class = ExperienceForm
+    template_name_suffix = '_update_form'
+    template_name = 'experience_update_form.html'
+    success_url = '/'
+
+class ExperienceDeleteView(DeleteView):
+    """
+    Delete Experience
+    """
+    model = Experience
+    template_name = 'expereince_delete.html'
+    success_url = reverse_lazy('home')
+
+class ExperienceDeleteComment(DeleteView):
+    """
+    Delete comment
+    """
+    model = Comment
+    template_name = 'delete_comment.html'
+    success_url = reverse_lazy('home')
