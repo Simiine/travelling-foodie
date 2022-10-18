@@ -17,8 +17,6 @@
 }
 
 
-
-
 /* Footer */
 .bright-bg {
     background-color: #61BDA9;
@@ -44,13 +42,39 @@ footer {
     color: white;
 }
 
+/* Experience Detail Page */
 
+.row {
+    margin: 0 2rem 0 2rem;
+    /* margin: 0px;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap; */
+}
 
-/* Sections of Information on Blog post */
+.experience-title {
+    margin-top: 0.5rem;
+}
+
+.image {
+    width: 100%;
+}
+
 .card {
-    /* border: none; */
+    border: none;
     background-color: transparent;
 }
+
+
+
+
+
+
+
+
+
+/* From Previous css template check what should be kept */
+
 
 /*Author name label on experience*/
 .image-container {
