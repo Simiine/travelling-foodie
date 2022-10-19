@@ -26,11 +26,14 @@
                     <div class="card mb-4">
                         <div class="card-body">
                             <div class="image-container">
-                                {% if "placeholder" in experience.featured_image.url %}
+                                <img class="card-img-top" src=" {{ experience.featured_image.url }}" alt="">
+                               
+                                <!-- {% if "placeholder" in experience.featured_image.url %}
                                 <img class="card-img-top" src="https://res.cloudinary.com/dawekfpal/image/upload/v1664818612/cld-sample-4.jpg" alt="">
                                 {% else %}
                                 <img class="card-img-top" src=" {{ experience.featured_image.url }}" alt="">
-                                {% endif %}
+                                {% endif %} -->
+
                                 <div class="image-flash">
                                     <p class="author">Author: {{ experience.author }}</p>
                                 </div>
