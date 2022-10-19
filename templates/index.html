@@ -13,6 +13,9 @@
             <h2>
                 Discover Food Experiences From Around The World!
             </h2>
+            <p>
+                A place foor travel and food enthusiasts to connect and discover! 
+            </p>
         </div>
 
         <!-- Experience Entries Column -->
@@ -29,7 +32,7 @@
                                 <img class="card-img-top" src=" {{ experience.featured_image.url }}" alt="">
                                 {% endif %}
                                 <div class="image-flash">
-                                    <p class="author">Author: {{ post.author }}</p>
+                                    <p class="author">Author: {{ experience.author }}</p>
                                 </div>
                             </div>
                             <a href="{% url 'experience_detail' experience.slug %}" class="experience-link">
@@ -58,7 +61,6 @@
             {% endif %}
             {% if page_obj.has_next %}
             <li><a href="?page={{ page_obj.next_page_number }}" class="page-link"> NEXT &raquo;</a></li>
-
             {% endif %}
         </ul>
     </nav>
