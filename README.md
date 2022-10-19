@@ -1,6 +1,7 @@
 # Travelling Foodie
-Travelling Foodie...
-![responsive design picture](static/images/)
+Travelling Foodie is more than just a site for people to share recipes from around the world. It is a site that allows people to share their travel experiences that centers around food. For the lovers of food and travel. A way of learning about different cultures, connecting with people on something as wonderful and wholesome as food. 
+
+![responsive design picture](static/images/responsive-design-picture.png)
 
 ## Planning
 Working in Sprints
@@ -10,26 +11,50 @@ Developing Issues and a Project Board
 
 ### User Stories
 #### Site User
+- As a Site User I can see a list of posts so that I can choose which one to view
+- As a site user I can click on a post so that I can view the post details
+- As a Site User I can view the number of likes on a post so that I can see which recipes are more popular
+- As a Site User I can like or unlike a post so that I can interact with the content
+- As a Site User I can view the comments on a post so that I can read the conversation
+- As a Site User I can comment on posts so that I can be part of the conversation
+- As a Site User I can create, read, update and delete posts so that I can manage the site's content
+- As a Site User I can register an account so that I can have access to the site
+- As a Site User I can log in/out so that I can interact with the site
+- As a Site User I can view a paginated list of posts so that I can easily select a post to view
 #### Site Admin
+- As a Site Admin I can view the number of likes on a post so that I can see which recipes are more popular
+- As a Site Admin I can view the comments on a post so that I can read the conversation
+- As a Site Admin I can approve or disapprove comments so that I can filter out inappropriate comments
+- As a Site Admin I can create, read, update and delete posts so that I can manage the site's content
+- As a Site Admin I can tell users about the website so that I can inform users about the site and why they should return
 
 ### Site Owner Goals
+As the owner of this site, my goals are to:
+- Create a site where people can create and posts
+- Create a site where people can see posts on different experiences
+- Create a site where people can like and unlike posts
+- Create a site where people can see the number of likes on a post
+- Create a site where people can comment on posts
+- Create a site where people can view comments on posts
+- Create a site where people can register an account
+- Create a site where people can log in and out 
 
 ### Design Choices
 #### Typography
 #### Colour Palette
+I chose to go for a very rich colourful palette. To complement the theme of site all about experiencing amazing food around the world. I chose to go for a cobination of oranges, reds and teals. The colour palette I generated is available at https://coolors.co/f7a133-f47a33-f14738-dc3c35-369184-61bda9
+![Colour Palette](static/images/Colour-palette.png)
 #### Logo
+In order to showcase the theme of the site I designed a logo to showed a stack of plates with a plane going around it.
+
+![Logo](static/images/logo.png)
 
 ### Wireframes
 #### Desktop
 #### Mobile
 
 ## Information Architecture
-SQL Link - 
-![SQL diagram](static/images/)
-
-## Structure
-### Flowchart 
-![Flow chart picture](static/images/)
+![SQL diagram](static/images/sql-diagram.png)
 
 ## Features
 ### Existing Features
