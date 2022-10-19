@@ -32,7 +32,7 @@
             <div class="col-1">
                 <strong>
                     {% if user.is_authenticated %}
-                    <form action="d-inline" action="{% url 'experience_like' experience.slug %}" method="POST">
+                    <form class="d-inline" action="{% url 'experience_like' experience.slug %}" method="POST">
                         {% csrf_token %}
                         {% if liked %}
                         <button type="submit" name="experience_id" value="{{experience.slug}}" class="btn-like"><i class="fas fa-heart"></i></button>
