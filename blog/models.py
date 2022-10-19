@@ -3,6 +3,8 @@ from django.contrib.auth.models import User
 from cloudinary.models import CloudinaryField
 from taggit.managers import TaggableManager
 from django_countries.fields import CountryField
+from django.template.defaultfilters import slugify
+
 #from django_summernote.fields import SummernoteTextField 
 
 STATUS = ((0, "Draft"), (1, "Published"))
@@ -12,7 +14,7 @@ class Experience(models.Model):
     Model for Experiences
     """
     title = models.CharField(max_length=200, unique=True)
-    slug = models.SlugField(max_length=200, unique=True)
+    slug = models.SlugField(max_length=200, unique=True, blank=False, null=False)
     author = models.ForeignKey(User, on_delete=models.CASCADE, related_name="experiences")
     created_on = models.DateTimeField(auto_now_add=True)
     featured_image = CloudinaryField('image', default='placeholder')
@@ -40,6 +42,11 @@ class Experience(models.Model):
         Returns the number of likes on an experience
         """
         return self.likes.count()
+
+    def save(self, *args, **kwargs):
+        if not self.slug:
+            self.slug = slugify(self.title)
+        return super().save(*args, **kwargs)
 
 class Comment(models.Model):
     """
