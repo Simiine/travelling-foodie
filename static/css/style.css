@@ -16,12 +16,10 @@
     font-family: Lato, sans-serif;
 }
 
-
 /* Footer */
 .bright-bg {
     background-color: #61BDA9;
     font-size: 1.5rem;
-   
 }
 
 /* footer */
@@ -38,19 +36,15 @@ footer {
     color: #fff;
 }
 
+.social-networks li {
+    margin-right: 1%;
+}
+
 .social-networks i {
     color: white;
 }
 
 /* Experience Detail Page */
-
-.row {
-    margin: 0 2rem 0 2rem;
-    /* margin: 0px;
-    width: 100%;
-    display: flex;
-    flex-wrap: wrap; */
-}
 
 .experience-title {
     margin-top: 0.5rem;
@@ -65,22 +59,34 @@ footer {
     background-color: transparent;
 }
 
-/*Add experience page*/
+.edit-experience-box {
+    justify-content: center;
+    text-align: center;
+}
 
+/* Add Experience page */
 
-/* From Previous css template check what should be kept */
+.submit-box {
+    justify-content: center;
+    /* align-items: center; */
+    display: flex;
+}
 
+.submit-box button {
+    width: 10rem;
+    height: 3rem;
+}
 
-/*Author name label on experience*/
+/* Home page */
 .image-container {
     position: relative;
 }
 .image-flash {
-    position: absolute;
+    /* position: absolute; */
     bottom: 5%;
     min-width: 30%;
     left: -2px;
-    background-color: #23BBBB;
+    background-color: #F7A133;
 }
 
 .author {
@@ -89,11 +95,20 @@ footer {
     text-transform: uppercase;
 }
 
+.experience-link {
+    text-decoration: none;
+    color: black;
+}
+
+.experience-link:hover,
+.experience-link:active {
+    color: #f47a33;
+}
+
 .masthead {
     overflow: hidden;
     position: relative;
     display: inline-block;
-
     height: 33vh;
     width: 100%;
     background: no-repeat center center;
@@ -101,18 +116,23 @@ footer {
     margin-bottom: 3rem;
 }
 
-.masthead-text {
+/* From Previous css template check what should be kept */
+
+
+/*Author name label on experience*/
+
+/* .masthead-text {
     background-color: #445261;
     color: white;
     position: relative;
-}
+} */
 
-.masthead-image {
+/* .masthead-image {
     position: relative;
     overflow: hidden;
-}
+} */
 
-.masthead-image:after {
+/* .masthead-image:after {
     content: "";
     position: absolute;
     top: 0;
@@ -124,7 +144,7 @@ footer {
     -moz-transform: skew(15deg);
     transform: skew(15deg);
     z-index: 100;
-}
+} */
 
 .post-link {
     text-decoration: none;
