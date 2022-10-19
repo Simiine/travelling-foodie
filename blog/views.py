@@ -1,4 +1,4 @@
-from django.shortcuts import render, get_object_or_404, reverse
+from django.shortcuts import render, get_object_or_404, reverse, redirect
 from django.views import generic, View
 from django.http import HttpResponseRedirect
 from django.contrib.auth import authenticate
@@ -16,7 +16,7 @@ class ExperienceList(generic.ListView):
     model = Experience
     queryset = Experience.objects.filter(status=1).order_by('-created_on')
     template_name = 'index.html'
-    paginate_by = 6
+    paginate_by = 3
 
 class ExperienceDetail(View):
     """
@@ -124,8 +124,9 @@ class ExperienceEditView(UpdateView):
     """
     model = Experience
     form_class = ExperienceForm
-    template_name_suffix = '_update_form'
-    template_name = 'experience_update_form.html'
+    template_name_suffix = '_edit'
+    template_name = 'experience_edit.html'
+    # template_name = 'experience_update_form.html'
     success_url = '/'
 
 class ExperienceDeleteView(DeleteView):
@@ -133,7 +134,7 @@ class ExperienceDeleteView(DeleteView):
     Delete Experience
     """
     model = Experience
-    template_name = 'expereince_delete.html'
+    template_name = 'experience_delete.html'
     success_url = reverse_lazy('home')
 
 class ExperienceDeleteComment(DeleteView):
