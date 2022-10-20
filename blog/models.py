@@ -14,7 +14,7 @@ class Experience(models.Model):
     Model for Experiences
     """
     title = models.CharField(max_length=200, unique=True)
-    slug = models.SlugField(max_length=200, unique=True, blank=False, null=False)
+    slug = models.SlugField(max_length=200, unique=True, blank=True, null=False)
     author = models.ForeignKey(User, on_delete=models.CASCADE, related_name="experiences")
     created_on = models.DateTimeField(auto_now_add=True)
     featured_image = CloudinaryField('image', default='placeholder')
