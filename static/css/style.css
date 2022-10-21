@@ -1,13 +1,7 @@
-* {
-    margin: 0;
-    padding: 0;
-    border: none;
-}
-
 /* Logo and nav bar */
 
 .logo {
-    width: 10rem;
+    width: 5.5rem;
 }
 
 #navText {
@@ -16,73 +10,11 @@
     font-family: Lato, sans-serif;
 }
 
-/* Footer */
-.bright-bg {
-    background-color: #61BDA9;
-    font-size: 1.5rem;
-}
-
-/* footer */
-
-footer {
-    height: 5rem;
-}
-
-.social-networks {
-    text-align: center;
-    display: flex;
-    list-style-type: none;
-    justify-content: center;
-    color: #fff;
-}
-
-.social-networks li {
-    margin-right: 1%;
-}
-
-.social-networks i {
-    color: white;
-}
-
-/* Experience Detail Page */
-
-.experience-title {
-    margin-top: 0.5rem;
-}
-
-.image {
-    width: 100%;
-}
-
-.card {
-    border: none;
-    background-color: transparent;
-}
-
-.edit-experience-box {
-    justify-content: center;
-    text-align: center;
-}
-
-/* Add Experience page */
-
-.submit-box {
-    justify-content: center;
-    /* align-items: center; */
-    display: flex;
-}
-
-.submit-box button {
-    width: 10rem;
-    height: 3rem;
-}
-
 /* Home page */
 .image-container {
     position: relative;
 }
 .image-flash {
-    /* position: absolute; */
     bottom: 5%;
     min-width: 30%;
     left: -2px;
@@ -116,6 +48,80 @@ footer {
     margin-bottom: 3rem;
 }
 
+/* Experience Detail Page */
+
+.experience-title {
+    margin-top: 0.5rem;
+}
+
+.image {
+    width: 100%;
+}
+
+.card {
+    border: none;
+    background-color: transparent;
+}
+
+.btn-like {
+    color: #E84610;
+    border: none;
+    background: transparent;
+}
+
+.edit-experience-box {
+    justify-content: center;
+    text-align: center;
+}
+
+.margin-whole {
+    margin: 0.5rem;
+}
+* {
+    margin: 0;
+    padding: 0;
+    border: none;
+}
+
+/* Add Experience page */
+
+.submit-box {
+    justify-content: center;
+    display: flex;
+}
+
+.submit-box button {
+    width: 10rem;
+    height: 3rem;
+}
+
+/* Footer */
+
+footer {
+    height: 5rem;
+}
+
+.bright-bg {
+    background-color: #61BDA9;
+    font-size: 1.5rem;
+}
+
+.social-networks {
+    text-align: center;
+    display: flex;
+    list-style-type: none;
+    justify-content: center;
+    color: #fff;
+}
+
+.social-networks li {
+    margin-right: 1%;
+}
+
+.social-networks i {
+    color: white;
+}
+
 /* From Previous css template check what should be kept */
 
 
@@ -146,7 +152,7 @@ footer {
     z-index: 100;
 } */
 
-.post-link {
+/* .post-link {
     text-decoration: none;
     color: #445261;
 }
@@ -159,14 +165,14 @@ footer {
 .post-title {
     margin-top: 20%;
     margin-left: 5%;
-}
+} */
 
-.post-subtitle {
+/* .post-subtitle {
     margin-left: 5%;
     color: lightgray;
-}
+} */
 
-.btn-signup {
+/* .btn-signup {
     background-color: #23BBBB;
     color: #fff;
 }
@@ -175,28 +181,24 @@ footer {
 .btn-signup:active {
     background-color: #fff;
     color: #23BBBB;
-}
+} */
 
-.link {
+/* .link {
     color: #23BBBB;
     text-decoration: none;
-}
+} */
 
-.link:hover,
+/* .link:hover,
 .link:active {
     color: #445261;
     text-decoration: underline;
-}
+} */
 
-.btn-like {
-    color: #E84610;
-    border: none;
-    background: transparent;
-}
 
-.btn-like:hover,
+
+/* .btn-like:hover,
 .btn-like:active {
     color: #E84610;
     background: transparent;
     border: none;
-}
+} */ 
