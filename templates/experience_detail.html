@@ -5,19 +5,11 @@
 
 <!-- Experience Details -->
 <div class="row mt-2 margin-whole">
-    <div class="col-sm-8 pr-2">
+    <div class="col-sm-4 pr-2">
         <img class="card-img-top" src=" {{ experience.featured_image.url }}" alt="">
-
-        <!-- {% if "placeholder" in experience.featured_image.url %}
-        <img class="card-img-top" src="https://res.cloudinary.com/dawekfpal/image/upload/v1664818612/cld-sample-4.jpg" alt="">
-        {% else %}
-        <img class="card-img-top" src=" {{ experience.featured_image.url }}" alt="">
-        {% endif %} -->
-        
     </div>
-    <div class="col-sm-4 border rounded container-custom">
+    <div class="col-sm-8 border rounded container-custom">
         <h2 class="experience-title">{{ experience.title }}</h2>
-        <!-- Experience author goes before the | the experiences's created date goes after -->
         <p class="experience-subtitle">{{ experience.author }} | {{ experience.created_on }}</p>
         <hr>
         <div>
@@ -31,11 +23,7 @@
             <p>{{ experience.recipe | safe }}</p>
         </div>
         <hr>
-        <!-- <div>
-            <h5>Tags</h5>
-            <p>{{ experience.tags | safe }}</p>
-        </div> -->
-        <!-- <hr> -->
+        <!-- Experience Likes -->
         <div class="row">
             <div class="col-1">
                 <strong>
@@ -51,14 +39,13 @@
                     {% else %}
                     <span class="text-secondary"><i class="far fa-heart"></i></span>
                     {% endif %}
-                <!-- The number of likes goes before the closing strong tag -->
                 <span class="text-secondary"></i> {{ experience.number_of_likes }}</span>   
                 </strong>
             </div>
+            <!-- Experince comments -->
             <div class="col-1">
                 {% with comments.count as total_comments %}
                 <strong class="text-secondary"><i class="far fa-comments"></i>
-                    <!-- Our total_comments variable goes before the closing strong tag -->
                     {{ total_comments }}</strong>
                 {% endwith %}
             </div>
@@ -66,7 +53,7 @@
     </div>
 </div>
 
-<!-- Edit Experience --> <!-- To do how to authenticate for user loged in to edit --> 
+<!-- Edit experience box -->
 <div class="container mt-4">
     <div class="row edit-experience-box">
         <div class="col-6">
@@ -81,41 +68,33 @@
         </div>
     </div>
 </div>
-<!-- <div class="container text-center">
-    <br /><br />
-    <a href="{% url 'home' %}" class="back-button btn-default">Back</a>
-</div> -->
 
 <div class="row">
     <div class="col">
         <hr>
     </div>
 </div>
+
+<!-- Experience Comments Box-->
 <div class="row margin-whole">
     <div class="col-md-8 card mb-4  mt-3 ">
         <h3>Comments:</h3>
         <div class="card-body">
-            <!-- We want a for loop inside the tags to iterate through each comment in comments -->
             {% for comment in comments %}
             <div class="comments" style="padding: 10px;">
                 <p class="font-weight-bold">
-                    <!-- The commenter's name goes here. Check the model if you're not sure what that is -->
                     {{ comment.author }}
                     <span class=" text-muted font-weight-normal">
-                        <!-- The comment's created date goes here -->
                         {{ comment.created_on }}
                     </span> wrote:
                 </p>
-                <!-- The body of the comment goes before the | -->
                 {{ comment.body | linebreaks }}
             </div>
-            <!-- Our for loop ends here -->
             {% endfor %}
         </div>
     </div>
     <div class="col-md-4 card mb-4  mt-3 ">
         <div class="card-body">
-            <!-- Comment to appear only if user is authenticated -->
             {% if commented %}
             <div class="alert alert-success" role="alert">
                 Your comment is awaiting approval
@@ -127,7 +106,7 @@
             <form method="post" style="margin-top: 1.3em;">
                 {{ comment_form | crispy }}
                 {% csrf_token %}
-                <button type="submit" class="btn btn-signup btn-lg">Submit</button>
+                <button type="submit" class="btn btn-success btn-lg">Submit</button>
             </form>
             {% endif %}
             {% endif %}
