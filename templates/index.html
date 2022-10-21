@@ -6,9 +6,9 @@
 <header class="masthead" style="background-image: url('https://res.cloudinary.com/dawekfpal/image/upload/v1665702255/Travelling%20Foodie/collage-of-food-and-travel-pictures.jpg');">
 </header>
 
+<!-- Welcome section -->
 <div class="container-fluid">
     <div class="row">
-        <!-- Welcome message -->
         <div class="col text-center mt-3">
             <h2>
                 Discover Food Experiences From Around The World!
@@ -18,7 +18,7 @@
             </p>
         </div>
 
-        <!-- Experience Entries Column -->
+        <!-- Experiences -->
         <div class="col-12 mt-3 left">
             <div class="row">
             {% for experience in experience_list %}
@@ -27,20 +27,12 @@
                         <div class="card-body">
                             <div class="image-container">
                                 <img class="card-img-top" src=" {{ experience.featured_image.url }}" alt="">
-                               
-                                <!-- {% if "placeholder" in experience.featured_image.url %}
-                                <img class="card-img-top" src="https://res.cloudinary.com/dawekfpal/image/upload/v1664818612/cld-sample-4.jpg" alt="">
-                                {% else %}
-                                <img class="card-img-top" src=" {{ experience.featured_image.url }}" alt="">
-                                {% endif %} -->
-
                                 <div class="image-flash">
                                     <p class="author">Author: {{ experience.author }}</p>
                                 </div>
                             </div>
                             <a href="{% url 'experience_detail' experience.slug %}" class="experience-link">
                                 <h2 class="card-title">{{ experience.title }}</h2>
-                                <!-- <p class="card-text">{{ experience.excerpt }}</p> -->
                             </a>
                             <hr />
                             <p class="card-text text-muted h6">{{ experience.created_on}} <i class="far fa-heart"></i>{{ experience.number_of_likes }}</p>
@@ -56,6 +48,7 @@
             </div>
         </div>
     </div>
+    <!-- Site pagination -->
     {% if is_paginated %}
     <nav aria-label="Page navigation">
         <ul class="pagination justify-content-center">
