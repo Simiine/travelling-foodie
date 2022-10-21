@@ -12,6 +12,12 @@
 
 /* Home page */
 
+.card-img {
+    width: 100%;
+    height: 30vw;
+    object-fit: cover;
+}
+
 .image-container {
     position: relative;
 }
