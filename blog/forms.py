@@ -16,7 +16,7 @@ class ExperienceForm(forms.ModelForm):
     """
     class Meta:
         model = Experience
-        fields = ('slug', 'title', 'featured_image', 'country', 'content', 'recipe') #'tags',)
+        fields = ('slug', 'title', 'featured_image', 'country', 'content', 'recipe')
     
     def __init__(self, *args, **kwargs):
         super(ExperienceForm, self).__init__(*args, **kwargs)
