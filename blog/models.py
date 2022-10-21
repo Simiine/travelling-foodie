@@ -1,11 +1,10 @@
 from django.db import models
 from django.contrib.auth.models import User
 from cloudinary.models import CloudinaryField
-from taggit.managers import TaggableManager
+# from taggit.managers import TaggableManager
 from django_countries.fields import CountryField
 from django.template.defaultfilters import slugify
-
-#from django_summernote.fields import SummernoteTextField 
+# from django_summernote.fields import SummernoteTextField 
 
 STATUS = ((0, "Draft"), (1, "Published"))
 
@@ -19,9 +18,11 @@ class Experience(models.Model):
     created_on = models.DateTimeField(auto_now_add=True)
     featured_image = CloudinaryField('image', default='placeholder')
     country = CountryField()
-    content = models.TextField() #SummernoteTextField()
-    recipe = models.TextField() #SummernoteTextField()
-    tags = TaggableManager()
+    # content = SummernoteTextField() #models.TextField()
+    # recipe = SummernoteTextField() #models.TextField()
+    content = models.TextField()
+    recipe = models.TextField()
+    # tags = TaggableManager()
     status = models.IntegerField(choices=STATUS, default=0)
     likes = models.ManyToManyField(User, related_name='experience_likes', blank=True)
 
