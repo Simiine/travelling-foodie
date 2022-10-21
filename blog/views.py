@@ -85,7 +85,6 @@ class ExperienceLike(View):
             experience.likes.add(request.user)
         return HttpResponseRedirect(reverse('experience_detail', args=[slug]))
 
-# @login_required
 def add_experience(request):
     """
     Add experience
@@ -105,19 +104,6 @@ def add_experience(request):
 
     return render(request, 'add_experience.html', context={'experience_form': experience_form})
 
-# class ExperienceCreate(CreateView):
-#     """ 
-#     Create an Experience
-#     """
-#     model = Experience
-#     form_class = ExperienceForm
-#     template_name = 'add_experience.html'
-#     success_url = reverse_lazy('experience')
-
-#     def form_valid(self, form):
-#         form.instance.author = self.request.user
-#         return super().form_valid(form)
-
 class ExperienceEditView(UpdateView):
     """
     Edit Experience
@@ -126,7 +112,6 @@ class ExperienceEditView(UpdateView):
     form_class = ExperienceForm
     template_name_suffix = '_edit'
     template_name = 'experience_edit.html'
-    # template_name = 'experience_update_form.html'
     success_url = '/'
 
 class ExperienceDeleteView(DeleteView):
@@ -144,3 +129,9 @@ class ExperienceDeleteComment(DeleteView):
     model = Comment
     template_name = 'delete_comment.html'
     success_url = reverse_lazy('home')
+
+def about(request):
+    """
+    Opens about page
+    """
+    return render(request, 'about.html')
