@@ -4,7 +4,7 @@
 {% block content %}
 
 <!-- Experience Details -->
-<div class="row mt-2">
+<div class="row mt-2 margin-whole">
     <div class="col-sm-8 pr-2">
         <img class="card-img-top" src=" {{ experience.featured_image.url }}" alt="">
 
@@ -31,11 +31,11 @@
             <p>{{ experience.recipe | safe }}</p>
         </div>
         <hr>
-        <div>
+        <!-- <div>
             <h5>Tags</h5>
             <p>{{ experience.tags | safe }}</p>
-        </div>
-        <hr>
+        </div> -->
+        <!-- <hr> -->
         <div class="row">
             <div class="col-1">
                 <strong>
@@ -91,7 +91,7 @@
         <hr>
     </div>
 </div>
-<div class="row">
+<div class="row margin-whole">
     <div class="col-md-8 card mb-4  mt-3 ">
         <h3>Comments:</h3>
         <div class="card-body">
@@ -123,7 +123,7 @@
             {% else %}
             {% if user.is_authenticated %}
             <h3>Leave a comment:</h3>
-            <p>Posting as: {{ author.username }}</p>
+            <p>Posting as: {{ request.user }}</p>
             <form method="post" style="margin-top: 1.3em;">
                 {{ comment_form | crispy }}
                 {% csrf_token %}
