@@ -3,6 +3,7 @@
 
 {% block content %}
 
+<!-- Delete Experience Form -->
 <div class="container ">
     {% if request.user == experience.author %}
     <div class="row justify-content-center mt-5">
@@ -16,12 +17,9 @@
                     <button type="submit" class="my-2 btn btn-danger ">Delete</button>
                 </div>
                 <div class="col text-right">
-                    <a href="{% url 'experience_detail' experience.slug %}"
-                        class="my-2 btn btn-secondary ">Cancel</a>
+                    <a href="{% url 'experience_detail' experience.slug %}" class="my-2 btn btn-secondary ">Cancel</a>
                 </div>
             </div>
-
-           
         </form>
         </div>
     </div>
