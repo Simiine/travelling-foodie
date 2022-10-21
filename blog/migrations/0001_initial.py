@@ -6,7 +6,7 @@ from django.db import migrations, models
 import django.db.models.deletion
 import django_countries.fields
 import django_summernote.fields
-import taggit.managers
+# import taggit.managers
 
 
 class Migration(migrations.Migration):
@@ -15,7 +15,7 @@ class Migration(migrations.Migration):
 
     dependencies = [
         migrations.swappable_dependency(settings.AUTH_USER_MODEL),
-        ('taggit', '0005_auto_20220424_2025'),
+        # ('taggit', '0005_auto_20220424_2025'),
     ]
 
     operations = [
@@ -33,7 +33,7 @@ class Migration(migrations.Migration):
                 ('status', models.IntegerField(choices=[(0, 'Draft'), (1, 'Published')], default=0)),
                 ('author', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, related_name='experiences', to=settings.AUTH_USER_MODEL)),
                 ('likes', models.ManyToManyField(blank=True, related_name='experience_likes', to=settings.AUTH_USER_MODEL)),
-                ('tags', taggit.managers.TaggableManager(help_text='A comma-separated list of tags.', through='taggit.TaggedItem', to='taggit.Tag', verbose_name='Tags')),
+                # ('tags', taggit.managers.TaggableManager(help_text='A comma-separated list of tags.', through='taggit.TaggedItem', to='taggit.Tag', verbose_name='Tags')),
             ],
             options={
                 'ordering': ['-created_on'],
