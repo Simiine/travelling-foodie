@@ -11,6 +11,7 @@
 }
 
 /* Home page */
+
 .image-container {
     position: relative;
 }
@@ -42,6 +43,27 @@
     position: relative;
     display: inline-block;
     height: 33vh;
+    width: 100%;
+    background: no-repeat center center;
+    background-size: cover;
+    margin-bottom: 3rem;
+}
+
+/* About Page */
+
+.col-md-5 img {
+    width: 100%;
+}
+
+.align-center{
+    align-items: center;
+}
+
+.about-head {
+    overflow: hidden;
+    position: relative;
+    display: inline-block;
+    height: 30vh;
     width: 100%;
     background: no-repeat center center;
     background-size: cover;
@@ -95,6 +117,12 @@
     height: 3rem;
 }
 
+/* Forms */
+
+.form-box {
+    width: fit-content;
+}
+
 /* Footer */
 
 footer {
@@ -121,84 +149,3 @@ footer {
 .social-networks i {
     color: white;
 }
-
-/* From Previous css template check what should be kept */
-
-
-/*Author name label on experience*/
-
-/* .masthead-text {
-    background-color: #445261;
-    color: white;
-    position: relative;
-} */
-
-/* .masthead-image {
-    position: relative;
-    overflow: hidden;
-} */
-
-/* .masthead-image:after {
-    content: "";
-    position: absolute;
-    top: 0;
-    right: 90%;
-    height: 100%;
-    width: 150%;
-    background: #445261;
-    -webkit-transform: skew(15deg);
-    -moz-transform: skew(15deg);
-    transform: skew(15deg);
-    z-index: 100;
-} */
-
-/* .post-link {
-    text-decoration: none;
-    color: #445261;
-}
-
-.post-link:hover,
-.page-link {
-    color: #E84610;
-}
-
-.post-title {
-    margin-top: 20%;
-    margin-left: 5%;
-} */
-
-/* .post-subtitle {
-    margin-left: 5%;
-    color: lightgray;
-} */
-
-/* .btn-signup {
-    background-color: #23BBBB;
-    color: #fff;
-}
-
-.btn-signup:hover,
-.btn-signup:active {
-    background-color: #fff;
-    color: #23BBBB;
-} */
-
-/* .link {
-    color: #23BBBB;
-    text-decoration: none;
-} */
-
-/* .link:hover,
-.link:active {
-    color: #445261;
-    text-decoration: underline;
-} */
-
-
-
-/* .btn-like:hover,
-.btn-like:active {
-    color: #E84610;
-    background: transparent;
-    border: none;
-} */ 
