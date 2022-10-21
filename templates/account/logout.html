@@ -1,22 +1,23 @@
 {% extends "base.html" %}
+{% load crispy_forms_tags %}
 
 {% load i18n %}
 
-{% block head_title %}{% trans "Sign Out" %}{% endblock %}
+{% block head_title %}{% trans "Log Out" %}{% endblock %}
 
 {% block content %}
 
-<div class = "container pb-2 pt-2 border rounded container-custom info my-3">
-  <h2>{% trans "Sign Out" %}</h2>
-  <p>{% blocktrans %}Are you sure you want to sign out?{% endblocktrans %}</p>
+<div class = "container pb-2 pt-2 border rounded my-3 form-box">
+  <h2>{% trans "Log Out" %}</h2>
+  <p>{% blocktrans %}Are you sure you want to logout?{% endblocktrans %}</p>
   
-  <form class="login" method="POST" action="{% url 'account_logout' %}">
+  <form class="logout" method="POST" action="{% url 'account_logout' %}">
     {% csrf_token %}
-    {{ form.as_p }}
+    {{ form|crispy }}
     {% if redirect_field_value %}
     <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}" />
     {% endif %}
-    <button class="btn btn-success mb-3" type="submit">{% trans "Sign Out" %}</button>
+    <button class="btn btn-success mb-3" type="submit">{% trans "Log Out" %}</button>
   </form>
 </div>
 
