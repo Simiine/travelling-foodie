@@ -53,9 +53,21 @@
     </div>
 </div>
 
+<!-- User to Log In or Sign Up to like and leave comment -->
+<div class="container mt-4">
+    <div class="row center-align">
+        <div class="col-6">
+        {% if user.is_authenticated %}
+        {% else %}
+        <p>To like or comment <a href="{% url 'account_login' %}" aria-label="Go to Login page">Log In</a> or <a href="{% url 'account_signup' %}" aria-label="Go to sign up page">Sign Up</a></p>
+        {% endif %}
+        </div>
+    </div>
+</div>
+
 <!-- Edit experience box -->
 <div class="container mt-4">
-    <div class="row edit-experience-box">
+    <div class="row center-align">
         <div class="col-6">
             {% if request.user == experience.author %}
             <h5>Manage your Experience:</h5>
