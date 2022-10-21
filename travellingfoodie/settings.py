@@ -49,7 +49,6 @@ INSTALLED_APPS = [
     'allauth.socialaccount',
     'cloudinary',
     'django_summernote',
-    'taggit',
     'django_countries',
     'crispy_forms',
     'blog',
