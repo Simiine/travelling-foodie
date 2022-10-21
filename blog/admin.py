@@ -2,6 +2,7 @@ from django.contrib import admin
 from .models import Experience, Comment
 from django_summernote.admin import SummernoteModelAdmin
 
+
 @admin.register(Experience)
 class ExperienceAdmin(SummernoteModelAdmin):
     list_display = ('title', 'author', 'status', 'created_on', 'country')
@@ -9,6 +10,7 @@ class ExperienceAdmin(SummernoteModelAdmin):
     list_filter = ('status', 'created_on')
     prepopulated_fields = {'slug': ('title',)}
     summernote_fields = ('content', 'recipe')
+
 
 @admin.register(Comment)
 class CommentAdmin(admin.ModelAdmin):
