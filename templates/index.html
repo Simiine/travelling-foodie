@@ -14,7 +14,7 @@
                 Discover Food Experiences From Around The World!
             </h2>
             <p>
-                A place foor travel and food enthusiasts to connect and discover! 
+                A place for travel and food enthusiasts to share, discover and connect! To share your experience <a href="{% url 'account_login' %}" aria-label="Go to Login page">Log In</a> or <a href="{% url 'account_signup' %}" aria-label="Go to sign up page">Sign Up</a> to create an account!
             </p>
         </div>
 
@@ -26,7 +26,7 @@
                     <div class="card mb-4">
                         <div class="card-body">
                             <div class="image-container">
-                                <img class="card-img-top" src=" {{ experience.featured_image.url }}" alt="">
+                                <img class="card-img" src=" {{ experience.featured_image.url }}" alt="">
                                 <div class="image-flash">
                                     <p class="author">Author: {{ experience.author }}</p>
                                 </div>
