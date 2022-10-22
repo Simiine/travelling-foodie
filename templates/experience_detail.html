@@ -26,21 +26,19 @@
         <!-- Experience Likes -->
         <div class="row">
             <div class="col-1">
-                <strong>
-                    {% if user.is_authenticated %}
-                    <form class="d-inline" action="{% url 'experience_like' experience.slug %}" method="POST">
-                        {% csrf_token %}
-                        {% if liked %}
-                        <button type="submit" name="experience_id" value="{{experience.slug}}" class="btn-like"><i class="fas fa-heart"></i></button>
-                        {% else %}
-                        <button type="submit" name="experience_id" value="{{experience.slug}}" class="btn-like"><i class="far fa-heart"></i></button>
-                        {% endif %}
-                    </form>
+                {% if user.is_authenticated %}
+                <form class="d-inline" action="{% url 'experience_like' experience.slug %}" method="POST">
+                    {% csrf_token %}
+                    {% if liked %}
+                    <button type="submit" name="experience_id" value="{{experience.slug}}" class="btn-like" aria-label="Like button"><i class="fas fa-heart"></i></button>
                     {% else %}
-                    <span class="text-secondary"><i class="far fa-heart"></i></span>
+                    <button type="submit" name="experience_id" value="{{experience.slug}}" class="btn-like" aria-label="Like button"><i class="far fa-heart"></i></button>
                     {% endif %}
+                </form>
+                {% else %}
+                <span class="text-secondary"><i class="far fa-heart"></i></span>
+                {% endif %}
                 <span class="text-secondary"></i> {{ experience.number_of_likes }}</span>   
-                </strong>
             </div>
             <!-- Experince comments -->
             <div class="col-1">
@@ -72,6 +70,21 @@
             {% if request.user == experience.author %}
             <h5>Manage your Experience:</h5>
             <strong>{{ experience.author }}</strong> - {{ experience.title }}
+            <p>
+                <a href="{% url 'experience_edit' experience.slug %}" class="btn btn-success"><i class="fa fa-edit"></i> | Edit </i></a>
+                <a href="{% url 'experience_delete' experience.slug %}" class="btn btn-danger"><i class="fa fa-trash"></i> | Edit </i></a>
+            </p>
+            {% endif %}
+        </div>
+    </div>
+</div>
+
+<!-- <div class="container mt-4">
+    <div class="row center-align">
+        <div class="col-6">
+            {% if request.user == experience.author %}
+            <h5>Manage your Experience:</h5>
+            <strong>{{ experience.author }}</strong> - {{ experience.title }}
             <p><a href="{% url 'experience_edit' experience.slug %}"><button
                         class="btn btn-success"><i class="fa fa-edit"></i> | Edit</button></i></a>
                 <a href="{% url 'experience_delete' experience.slug %}"><button class="btn btn-danger"><i
@@ -79,7 +92,7 @@
             {% endif %}
         </div>
     </div>
-</div>
+</div> -->
 
 <div class="row">
     <div class="col">
