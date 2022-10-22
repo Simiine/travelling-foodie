@@ -1,5 +1,5 @@
 # Travelling Foodie
-Travelling foodie is a hub for sharing food-centred travelling experiences. Where people can share their recipes and adventures from around the world. It's for people who love experiencing and exploring different foods, learning about different cultures and connecting with people through their shared passion. The aim and focus of the site is to share experiences, passions, history and knowledge. A way of learning about different cultures and connecting with people. It is a community. 
+Travelling foodie is a hub for sharing food-centred travelling experiences. Where people can share their recipes and adventures from around the world. It's for people who love experiencing and exploring different foods, learning about different cultures and connecting with people through their shared passion. The aim and focus of the site is to share experiences, passions, history and knowledge. A way of learning about different cultures and connecting with people. It is a community.
 
 ![responsive design picture](static/images/responsive.png)
 
