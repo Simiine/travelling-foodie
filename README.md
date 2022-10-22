@@ -126,29 +126,51 @@ When the user clicks on the log out page they are directed to a confirmation pag
 ### Future Features
 
 ## Testing
+To ensure cross-compatibility, I tested the website across numerous devices and web browsers. The site was tested across different iPhones, a Samsung galaxy fold, an iPad, a Mac laptop, and a hp laptop. The site was also tested across google Chrome, Safari and Edge. For responsiveness, I used the developer tool for screen adjustments, so I could see how the site would look on different screen sizes as I made the required adjustments for it to be completely responsive.
+
+### Bugs
 
 ### Manual Testing
-#### Easy to navigate and clear instructions
-#### View Experiences
+#### Navigation Links
+Navigation links worked as expected
+
+#### View Experience post
+Link to view post details worked
+
 #### Register
 #### Login
+Nav bar changed as well as other features for comments when signed in
+
 #### Like
+Able to like a pot and hear changed colour and unlike
+
 #### Comment
+Was able to add a comment and got it was sent for approval
+
 #### Add experience
+Able to add an experience
+
 #### Edit experience
+Able to edit an experience
+
 #### Delete experience
+able to delete and experience
 
 ### Automated Testing
 
 #### PEP8
+I used the PEP8 validator on my Gitpod Workspace. the main errors the came up were line too long and whitespacing which I was able to correct. I correct all issues. 
 I passed the code through [PEP8](http://pep8online.com/) and the result showed all right with no issues.
 ![PEP 8 Picture](static/images/)
 
 #### HTML
+Testing was carried out using Jigsaw - https://validator.w3.org/ 
 
 #### CSS
+Testing was carried out using Jigsaw - https://jigsaw.w3.org/css-validator/
+No errors were found when passing through the official (Jigsaw) validator.
 
-#### Javascript
+![CSS](static/images/)
 
 #### Lighthouse
 
