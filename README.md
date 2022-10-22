@@ -139,12 +139,12 @@ The sign-up page was formed using crispy forms. The user can simply input their 
 #### Log In Page
 The log-in page was formed using crispy forms. The user can simply input their username and password to log in. 
 
-![Log in page](static/images/login.png)
+![Log In page](static/images/login-page.png)
 
 #### Log Out Page
-When the user clicks on the log-out page they are directed to a confirmation page!
+When the user clicks on the log-out page they are directed to a confirmation page
 
-[Log out page](static/images/log-out.png)
+![Log Out page](static/images/logout-page.png)
 
 ## Testing
 To ensure cross-compatibility, I tested the website across numerous devices and web browsers. The site was tested across different iPhones, a Samsung galaxy fold, an iPad, a Mac laptop, and a hp laptop. The site was also tested across Google Chrome, Safari and Edge. For responsiveness, I used the developer tool for screen adjustments, so I could see how the site would look on different screen sizes as I made the required adjustments for it to be completely responsive.
