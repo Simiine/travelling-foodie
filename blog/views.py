@@ -9,6 +9,7 @@ from .import forms
 from .forms import CommentForm
 from .forms import ExperienceForm
 
+
 class ExperienceList(generic.ListView):
     """
     Creates Experience list
@@ -18,6 +19,7 @@ class ExperienceList(generic.ListView):
     template_name = 'index.html'
     paginate_by = 3
 
+
 class ExperienceDetail(View):
     """
     Creates Experience detail view
@@ -25,7 +27,8 @@ class ExperienceDetail(View):
     def get(self, request, slug, *args, **kwargs):
         queryset = Experience.objects.filter(status=1)
         experience = get_object_or_404(queryset, slug=slug)
-        comments = experience.comments.filter(approved=True).order_by('created_on')
+        comments = experience.comments.filter(
+                   approved=True).order_by('created_on')
         liked = False
         if experience.likes.filter(id=self.request.user.id).exists():
             liked = True
@@ -45,7 +48,8 @@ class ExperienceDetail(View):
     def post(self, request, slug, *args, **kwargs):
         queryset = Experience.objects.filter(status=1)
         experience = get_object_or_404(queryset, slug=slug)
-        comments = experience.comments.filter(approved=True).order_by('created_on')
+        comments = experience.comments.filter(
+                   approved=True).order_by('created_on')
         liked = False
         if experience.likes.filter(id=self.request.user.id).exists():
             liked = True
@@ -72,6 +76,7 @@ class ExperienceDetail(View):
             },
         )
 
+
 class ExperienceLike(View):
     """
     Creates experience likes view
@@ -84,6 +89,7 @@ class ExperienceLike(View):
         else:
             experience.likes.add(request.user)
         return HttpResponseRedirect(reverse('experience_detail', args=[slug]))
+
 
 def add_experience(request):
     """
@@ -102,7 +108,9 @@ def add_experience(request):
             experience_form.save()
             return redirect('home')
 
-    return render(request, 'add_experience.html', context={'experience_form': experience_form})
+    return render(request, 'add_experience.html', context={'experience_form':
+                  experience_form})
+
 
 class ExperienceEditView(UpdateView):
     """
@@ -114,6 +122,7 @@ class ExperienceEditView(UpdateView):
     template_name = 'experience_edit.html'
     success_url = '/'
 
+
 class ExperienceDeleteView(DeleteView):
     """
     Delete Experience
@@ -122,6 +131,7 @@ class ExperienceDeleteView(DeleteView):
     template_name = 'experience_delete.html'
     success_url = reverse_lazy('home')
 
+
 class ExperienceDeleteComment(DeleteView):
     """
     Delete comment
@@ -129,6 +139,7 @@ class ExperienceDeleteComment(DeleteView):
     model = Comment
     template_name = 'delete_comment.html'
     success_url = reverse_lazy('home')
+
 
 def about(request):
     """
