@@ -1,7 +1,7 @@
 # Travelling Foodie
 Travelling foodie is a hub for sharing food-centred travelling experiences. Where people can share their recipes and adventures from around the world. It's for people who love experiencing and exploring different foods, learning about different cultures and connecting with people through their shared passion. The aim and focus of the site is to share experiences, passions, history and knowledge. A way of learning about different cultures and connecting with people. It is a community. 
 
-![responsive design picture](static/images/responsive-design-picture.png)
+![responsive design picture](static/images/responsive.png)
 
 ## Planning
 When it came to planning the project I used agile methodologies to plan the project. I worked in three sprints to complete the project. I ordered issues on the level of importance, from essential features to features that were just nice to have. This was done so that the core functionality of the site was up and running and then the features that would have been nice to have could be done at a later stage if there was scope to do so. I used several tools to help me with the planning of the project. I created a Kanban for the project using GitHub projects, which helped me keep good track and have a clear vision of the different areas I was working on and the progress I was making. I spent a lot of time planning before I began working on my code which gave me a great foundation beforehand and helped me a lot when working on the project. I mapped out the information architecture and created wireframes to help me have a strong visualisation of the site. 
@@ -60,19 +60,34 @@ To showcase the theme of the site I designed a logo to show a stack of plates wi
 ![Logo](static/images/logo.png)
 
 ### Wireframes
-#### Desktop
-#### Mobile
+#### Home Page
+![Home wireframe](static/images/home-wireframe.png)
+
+#### About Page
+![About wireframe](static/images/about-wireframe.png)
+
+#### Experience Detail Page
+![Experience wireframe](static/images/experience-detail-wireframe.png)
+
+#### Add experience Page
+![Add experience wireframe](static/images/add-experience-wireframe.png)
+
+#### Sign Up Page
+![Sign Up wireframe](static/images/signup-wireframe.png)
+
+#### Log In Page
+![Log In wireframe](static/images/login-wireframe.png)
 
 ## Features
 ### Existing Features
 #### Navigation
 The navigation bar sits at the top of all the pages and has links to the different pages across the site. The page links change depending on if a user is logged in or out of the page. If a user is not yet logged in it will show page links to the home page, about page, sign-up page and log-in page. If a user is signed in, it whos the home page, about page, add experience page and log out page. The nav bar also collapses to a toggle on smaller screen sizes for better usability. 
 
-![Nav bar logged in](static/images/)
+![Nav bar logged in](static/images/navbard-login.png)
 
-![Nav bar logged out](static/images/)
+![Nav bar logged out](static/images/navbar-logout.png)
 
-![Nav bar toggle](static/images/)
+![Nav bar toggle](static/images/navbar-toggle.png)
 
 #### Logo
 The logo sits to the left of the navbar and showcases a stack of plates in different colours and a plane going around it. 
@@ -80,56 +95,56 @@ The logo sits to the left of the navbar and showcases a stack of plates in diffe
 #### Home Page Header image
 On the home page, her image is a collage of different types of food surrounding another collage of polaroid pictures of different countries. 
 
-![Home page header image](static/images/)
+![Home page header image](static/images/home-page-header.png)
 
 #### Home Page Content
 The home page has a welcome section just underneath the hero image, giving a brief intro to the site and links to log in and register. Underneath the welcome message is the different experiences that have been uploaded by users. They are grouped in threes with an image of the food, the name of the author underneath, the title, the date it was added to the site and the number of likes on the post. The titles link to the experience details page, where the full content of the post can be seen. Below the content is a next button to go to the next page of experiences.
 
-![Home page page content](static/images/)
+![Home page page content](static/images/home-page-content.png)
 
 #### Footer
 The footer links to different social media pages.
-![Footer](static/images/)
+![Footer](static/images/footer.png)
 
 #### Experience Details
-The experience details page has the image of the food, the title the author, the date and time it was added, the country of the post, the content, the recipe, a like and comment button showing how many likes and comments on the post and a comments section at the bottom. When a user is not yet signed in there are instructions below the content for a user to log in or sign up to like the post or leave a comment. If a user is logged in and in their post, they get the option below the content to edit or delete the post. When a user leaves a comment, they receive an alert saying their comment is awaiting approval.
+The experience details page has the image of the food, the title the author, the date and time it was added, the country of the post, the content, the recipe. The like button is under the content on the experience details page, where a user can see the number of likes on a post and like or unlike the post. The comment button is under the content on the experience details page, where a user can see the number of comments on a post.
 
-![Experience details](static/images/)
+![Experience details](static/images/experience-details.png)
+
+#### Edit/Delete Experience
+If a user is logged in and in their post, they get the option below the content to edit or delete the post. When the click edit they can edit all the contents of the experience. When they click edit they are taken to a confirmation page. 
+
+![Edit Delete Experience](static/images/edite-delete-exprience.png)
+![Edit Experience](static/images/edit-experience.png)
+![Delete Experience](static/images/delete-experience.png)
+
+#### Comment Box
+When I user is logged in a comment box appears at the bottom of the expereince details page where the user can comment on the post. When a user leaves a comment, they receive an alert saying their comment is awaiting approval.
 
 #### Add experience Page
 The add experience page is a form where the user can upload their experience to the site. They can add a title, upload an image, select a country, and add the content and recipe. 
 
-![name](static/images/)
-
-#### Like
-The like button is under the content on the experience details page, where a user can see the number of likes on a post and like or unlike the post. 
-
-![name](static/images/)
-
-#### Comment
-The comment button is under the content on the experience details page, where a user can see the number of comments on a post and comment on a post 
-
-![name](static/images/)
+![Add Experience Page](static/images/add-experience.png)
 
 #### About Page
 The about page has a hero image of a collage of polaroid pictures of different countries. Below the hero image is an image of people sitting around a dinner table with food and to the right of the image is some information about the site.
 
-![About page](static/images/)
+![About page](static/images/about-page.png)
 
 #### Sign Up Page
 The sign-up page was formed using crispy forms. The user can simply input their username, optional email, and password twice to sign up.
 
-![Sig up](static/images/)
+![Sign up](static/images/sign-up.png)
 
 #### Log In Page
 The log-in page was formed using crispy forms. The user can simply input their username and password to log in. 
 
-![Log in page](static/images/)
+![Log in page](static/images/login.png)
 
 #### Log Out Page
 When the user clicks on the log-out page they are directed to a confirmation page!
 
-[Log out page](static/images/)
+[Log out page](static/images/log-out.png)
 
 ## Testing
 To ensure cross-compatibility, I tested the website across numerous devices and web browsers. The site was tested across different iPhones, a Samsung galaxy fold, an iPad, a Mac laptop, and a hp laptop. The site was also tested across Google Chrome, Safari and Edge. For responsiveness, I used the developer tool for screen adjustments, so I could see how the site would look on different screen sizes as I made the required adjustments for it to be completely responsive.
@@ -188,10 +203,6 @@ I tested the edit and delete experience feature. The edit and delete feature onl
 - No errors were found when passing through the official (Jigsaw) validator.
 
 ![CSS](static/images/css.png)
-
-#### Lighthouse
-
-
 
 ## Deployment
 The live deployment can be found using the following URL - https://events-planner-p3.herokuapp.com/
