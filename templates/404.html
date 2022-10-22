@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<body>
+    <div class="container">
+        <h1>Page Not Found</h1>
+        <p>Sorry, but the page you were trying to view does not exist.</p>
+        <a href="{% url 'home' %}" aria-label="Go to home page">Go to Home Page</a>
+    </div>
+</body>
+
+{% endblock %}
