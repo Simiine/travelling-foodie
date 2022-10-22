@@ -159,9 +159,7 @@ able to delete and experience
 ### Automated Testing
 
 #### PEP8
-I used the PEP8 validator on my Gitpod Workspace. the main errors the came up were line too long and whitespacing which I was able to correct. I correct all issues. 
-I passed the code through [PEP8](http://pep8online.com/) and the result showed all right with no issues.
-![PEP 8 Picture](static/images/)
+I used the PEP8 validator on my Gitpod Workspace. All pages were cleared. 
 
 #### HTML
 Testing was carried out using Jigsaw - https://validator.w3.org/ 
