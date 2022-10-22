@@ -72,27 +72,12 @@
             <strong>{{ experience.author }}</strong> - {{ experience.title }}
             <p>
                 <a href="{% url 'experience_edit' experience.slug %}" class="btn btn-success"><i class="fa fa-edit"></i> | Edit </i></a>
-                <a href="{% url 'experience_delete' experience.slug %}" class="btn btn-danger"><i class="fa fa-trash"></i> | Edit </i></a>
+                <a href="{% url 'experience_delete' experience.slug %}" class="btn btn-danger"><i class="fa fa-trash"></i> | Delete </i></a>
             </p>
             {% endif %}
         </div>
     </div>
 </div>
-
-<!-- <div class="container mt-4">
-    <div class="row center-align">
-        <div class="col-6">
-            {% if request.user == experience.author %}
-            <h5>Manage your Experience:</h5>
-            <strong>{{ experience.author }}</strong> - {{ experience.title }}
-            <p><a href="{% url 'experience_edit' experience.slug %}"><button
-                        class="btn btn-success"><i class="fa fa-edit"></i> | Edit</button></i></a>
-                <a href="{% url 'experience_delete' experience.slug %}"><button class="btn btn-danger"><i
-                            class="fa fa-trash"></i> | Delete</button></a></p>
-            {% endif %}
-        </div>
-    </div>
-</div> -->
 
 <div class="row">
     <div class="col">
